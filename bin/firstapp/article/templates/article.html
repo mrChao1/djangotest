@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block article %}
+	<h4> {{ article.article_date }} </h4>
+	<h2> {{ article.article_title }} </h2>
+	<p> {{ article.article_text }} </p>
+	<hr>
+	<br>
+	<h4><p>Коменты:</p></h4>
+
+	{% for comment in comments %}
+		
+		Бац: {{ comment.comments_text }}
+
+		<br>
+		<br>
+		
+	{% endfor %}
+{% endblock %}
+
